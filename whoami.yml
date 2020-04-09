@@ -1,0 +1,9 @@
+---
+- hosts: test
+  become: true 
+  tasks:
+  - name: Check logged username via "whoami" command 
+    command: whoami 
+    register: whoami
+
+  - debug: var=whoami.stdout_lines

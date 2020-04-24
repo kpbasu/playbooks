@@ -1,5 +1,5 @@
 ---
-- name: set test namespace to {{ state }}
+- name: set test namespace to present
   k8s:
     api_version: v1
     kind: Namespace
